@@ -1,0 +1,51 @@
+﻿@{
+   ViewData["Title"] = "Login";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoList - Login</title>
+    <link rel="stylesheet" href="~/css/Login.css" />
+</head>
+<body>
+    <div id="loginScreen" class="login-container">
+        <div class="glass-card">
+            <div class="header">
+                <h1 class="title">Welcome to Task List</h1>
+                
+                <div class="avatar-container">
+                    <div class="avatar" id="avatar">
+                        <svg class="user-icon" id="userIcon" viewBox="0 0 24 24">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                        <span id="userInitial" class="hidden"></span>
+                    </div>
+                </div>
+            </div>
+
+            <form asp-action="Login" asp-controller="Account" method="post" id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label for="name" class="label">Name</label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name"
+                        class="input" 
+                        placeholder="Type your name here" 
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="button" id="submitButton">
+                    Enter
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
